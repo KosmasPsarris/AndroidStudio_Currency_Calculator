@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/app_background">
+
+    <!-- Texts/Currencies LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <!-- Black screen CardView -->
+        <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/calculator_cardView_background"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="10dp"    >
+
+            <!-- Spinners grand-background -->
+            <View
+                android:layout_width="105dp"
+                android:layout_height="match_parent"
+                android:background="@color/spinner_cardView_background"
+                android:layout_gravity="end"/><!-- Spinners grand-background -->
+
+            <!-- LineBorder -->
+            <View
+                android:layout_width="105dp"
+                android:layout_height="50dp"
+                android:background="@color/white"
+                android:layout_gravity="center"
+                android:layout_marginStart="124dp"
+                /><!-- LineBorder -->
+
+            <!-- Vertical Currency Spinners-textViews LinearLayout -->
+            <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+                <!-- Horizontal Currency textView-spinner 1 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvFirstConversion"
+                        android:layout_width="255dp"
+                        android:layout_height="match_parent"
+                        android:ems="15"
+                        android:maxLength="15"
+                        android:textSize="28sp"
+                        android:textColor="@color/black"
+                        android:gravity="end|center"
+                        android:layout_gravity="center"
+                        android:background="@color/currency1_textView"
+                        android:hint="@string/tvHint_conversion_from"
+                        android:autofillHints="ConversionFrom"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spFirstConversion"
+                        android:layout_width="100dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:theme="@style/mySpinnerStyle"
+                        />
+
+                </LinearLayout><!-- Horizontal Currency textView-spinner 1 LinearLayout -->
+
+                <!-- Conversion Arrow ImageView -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginEnd="50dp"
+                    android:src="@drawable/arrowdown"
+                    android:contentDescription="@string/conversion_arrow_description"
+                    /><!-- Conversion Arrow ImageView -->
+
+                <!-- Horizontal Currency textView-spinner 2 LinearLayout -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tvSecondConversion"
+                        android:layout_width="255dp"
+                        android:layout_height="match_parent"
+                        android:ems="15"
+                        android:maxLength="15"
+                        android:textSize="28sp"
+                        android:textColor="@color/black"
+                        android:gravity="end|center"
+                        android:layout_gravity="center"
+                        android:background="@color/currency2_textView"
+                        android:hint="@string/tvHint_conversion_to"
+                        android:autofillHints="ConversionTo"
+                        />
+
+                    <Spinner
+                        android:id="@+id/spSecondConversion"
+                        android:layout_width="100dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="end"
+                        android:layout_marginStart="15dp"
+                        android:theme="@style/mySpinnerStyle"
+                        />
+
+                </LinearLayout><!-- Horizontal Currency textView-spinner 2 LinearLayout -->
+
+            </LinearLayout> <!-- Vertical Currency Spinners-textViews LinearLayout -->
+
+        </androidx.cardview.widget.CardView> <!-- Black screen CardView -->
+
+    </LinearLayout> <!-- Texts/Currencies LinearLayout -->
+
+    <!-- Calculator Buttons LinearLayout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <!-- first row 7 8 9 / -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarButtonStyle">
+
+            <Button
+                android:id="@+id/button7"
+                android:text="@string/button7"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button8"
+                android:text="@string/button8"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button9"
+                android:text="@string/button9"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/buttonDivide"
+                android:text="@string/buttonDivide"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+
+        </LinearLayout>
+        <!-- second row 4 5 6 * -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarButtonStyle">
+
+            <Button
+                android:id="@+id/button4"
+                android:text="@string/button4"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button5"
+                android:text="@string/button5"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button6"
+                android:text="@string/button6"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:text="@string/buttonMultiply"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+
+        </LinearLayout>
+        <!-- third row 1 2 3 - -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarButtonStyle">
+
+            <Button
+                android:id="@+id/button1"
+                android:text="@string/button1"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button2"
+                android:text="@string/button2"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/button3"
+                android:text="@string/button3"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/buttonMinus"
+                android:text="@string/buttonMinus"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+
+        </LinearLayout>
+        <!-- fourth row . 0 Clear + -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarButtonStyle">
+
+            <Button
+                android:id="@+id/buttonDecimal"
+                android:text="@string/buttonDecimal"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+            <Button
+                android:id="@+id/button0"
+                android:text="@string/button0"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color1"
+                />
+            <Button
+                android:id="@+id/buttonClear"
+                android:text="@string/buttonClear"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+            <Button
+                android:id="@+id/buttonPlus"
+                android:text="@string/buttonPlus"
+                android:textSize="35sp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color2"
+                />
+
+        </LinearLayout>
+        <!-- fifth row = -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            style="?android:attr/buttonBarButtonStyle">
+
+            <Button
+                android:id="@+id/buttonEqual"
+                android:text="@string/buttonEqual"
+                android:textSize="35sp"
+                android:layout_width="200dp"
+                android:layout_height="85dp"
+                app:backgroundTint="@color/purple_200"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle"
+                android:backgroundTint="@color/button_color3"
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
