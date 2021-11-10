@@ -20,9 +20,9 @@ In order to request the currency data, Kotlin's coroutines were used, with depen
 2) implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5'
 
 We also need to connect to the internet to get the data, so we use the permission:
-<uses-permission android:name="android.permission.INTERNET"/>
+uses-permission android:name="android.permission.INTERNET"
 
-Finally, we use ViewBinding so we can interact easily with the views.
+Finally, we use ViewBinding so we can interact easily with the views:
 buildFeatures {
     viewBinding true
 }
